@@ -7,11 +7,20 @@ ial-scale=1.0">
 <title>Ejercicio 16</title>
 <style>
 /* Aquí van tus estilos CSS */
+.grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+.grid-item {
+    grid-column: span 2;
+    text-align: center;
+}
 </style>
 </head>
 <body>
 <div class="grid-container">
-<div>Item 1</div>
+<div class="grid-item">Item 1</div>
 <div>Item 2</div>
 <div>Item 3</div>
 <div>Item 4</div>
