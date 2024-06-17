@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        function verificarNumero(numero) {
+            if (numero > 0) {
+                return ("El número " + num +  " es positivo.");
+            } else if (numero < 0) {
+                return "El número " + num + " es negativo.";
+            } else {
+                return "El número " + num + " es cero.";
+            }
+        }
+
+        // Ejemplo de uso: pedir al usuario un número
+        let num = prompt("Ingrese un número:");
+
+        // Verificar y mostrar el resultado en la consola
+        console.log(verificarNumero(num));
+    </script>
+</body>
+</html>
