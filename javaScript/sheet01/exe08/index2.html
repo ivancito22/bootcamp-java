@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos2</title>
+  </head>
+  <body>
+    <script>
+        let persona = {
+        nombre: "Iván",
+        edad: 63,
+        ciudad: "Bilbao",
+        trabajo: "Sin trabajo",
+        estado: "Soltero",
+      }
+
+      function describirPersona(persona) {
+        let descripcion = `Nombre: ${persona.nombre}, Edad: ${persona.edad}, Ciudad: ${persona.ciudad}, Trabajo: ${persona.trabajo}, Estado: ${persona.estado},`;
+        return descripcion;
+      }
+
+      let resultado = describirPersona(persona);
+      console.log(resultado);
+    </script>
+  </body>
+</html>
