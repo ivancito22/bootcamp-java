@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número mayor</title>
+</head>
+<body>
+    <script>
+        function mayor() {
+    // Solicita el primer número
+    let num1 = parseFloat(prompt("Introduce el primer número:"));
+    
+    // Solicita el segundo número
+    let num2 = parseFloat(prompt("Introduce el segundo número:"));
+    
+    // Compara los dos números y determina el mayor
+    if (num1 > num2) {
+        return num1;
+    } else if (num2 > num1) {
+        return num2;
+    } else {
+        return "Los dos números son iguales";
+    }
+}
+
+// Llama a la función mayor y muestra el resultado
+let resultado = mayor();
+console.log(`El número mayor es: ${resultado}`);
+    </script>
+</body>
+</html>
