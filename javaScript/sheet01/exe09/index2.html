@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadenas2</title>
+  </head>
+  <body>
+    <script>
+      function contarVocales(cadena) {
+        const vocales = "aeiouAEIOU";
+        let contador = 0;
+        for (let i = 0; i < cadena.length; i++) {
+          if (vocales.includes(cadena[i])) {
+            contador++;
+          }
+        }
+        return contador;
+      }
+      let texto = "En un lugar de La Mancha...";
+
+      console.log (texto);
+      console.log (`El número de vocales es de: ${contarVocales(texto)}`);
+    </script>
+  </body>
+</html>
