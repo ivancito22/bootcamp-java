@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta texto</title>
+</head>
+<body>
+    <label for="texto"></label>
+    <input type="text" id="texto" placeholder="Escribe algo...">
+    <button onclick="mostrarAlerta()">Mostrar texto</button>
+
+    <script>
+        // Definir la función mostrarAlerta
+        function mostrarAlerta() {
+            // Obtener el valor del campo de texto
+            let mensaje = document.getElementById('texto').value;
+
+            // Mostrar una alerta con el contenido del campo de texto
+            alert(mensaje);
+        }
+    </script>
+</body>
+</html>
