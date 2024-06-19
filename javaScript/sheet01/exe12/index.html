@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <br>
+    <label for="n1"></label>
+    <input type="number" name="N1" id="n1" placeholder="Escribe un numero">
+    <label for="n2"></label>
+    <input type="number" name="N2" id="n2" placeholder="Escribe un numero"><br><br>
+
+    <button onclick="suma()">Sumar</button>
+    <button onclick="resta()">Restar</button>
+    <button onclick="producto()">Multiplicar</button>
+    <button onclick="divide()">Dividir</button>
+    <hr>
+    Res: <span id="res"></span>
+    <script>
+        function suma() {
+
+    const r = document.getElementById('res');
+
+    let nN1 = document.getElementById('n1').value;
+    let nN2 = Number(document.getElementById('n2').value);
+
+    let nSuma = Number(nN1) + nN2;
+    r.innerHTML = nSuma;
+}
+        function resta() {
+
+    const r = document.getElementById('res');
+
+    let nN1 = document.getElementById('n1').value;
+    let nN2 = Number(document.getElementById('n2').value);
+
+    let nResta = Number(nN1) - nN2;
+    r.innerHTML = nResta;
+}
+
+function producto() {
+
+const r = document.getElementById('res');
+
+let nN1 = document.getElementById('n1').value;
+let nN2 = document.getElementById('n2').value;
+
+let nProducto = nN1 * nN2;
+r.innerHTML = nProducto;
+}
+function divide() {
+
+const r = document.getElementById('res');
+
+let nN1 = document.getElementById('n1').value;
+let nN2 = document.getElementById('n2').value;
+
+let nDivision = nN1 / nN2;
+r.innerHTML = nDivision;
+}
+
+    </script>
+</body>
+</html>
