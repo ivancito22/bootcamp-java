@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validar contraseña</title>
+    <style>
+        input{
+            border :black solid;
+        }
+        input:invalid{
+            border : red solid;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <label for="password">Contraseña</label>
+        <input id="password" name="password" required minlength="8" maxlength="20">
+        <label for="rpassword">Repetir Contraseña</label>
+        <input id="rpassword" name="rpassword" required minlength="8" maxlength="20">
+        <input type="submit">
+
+    </form>
+    <script>
+        let form = document.getElementById("formulario");
+        
+        function validar(elEvento)
+        {
+            elEvento.preventDefault();
+            let password = this.password;
+            let rpassword = this.rpassword;
+            console.log(password);
+            let passwordValue = this.password.value;
+            let rpasswordValue = this.rpassword.value;
+            if(passwordValue === rpasswordValue)
+            {
+              this.submit();
+              password.setCustomValidity("");
+              rpassword.setCustomValidity("");
+            }
+            else
+            {
+                password.setCustomValidity(`las contraseñas no son iguales ${passwordValue} != ${rpasswordValue}`);
+                rpassword.setCustomValidity(`las contraseñas no son iguales ${passwordValue} != ${rpasswordValue}`);
+                this.reportValidity();
+            }
+        }
+        form.addEventListener('submit', validar);
+    </script>
+</body>
+</html>
