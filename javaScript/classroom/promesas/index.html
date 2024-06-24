@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <script>
+        function sumar(a, b) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const resultado = a + b;
+                    console.log(`Suma: ${resultado}`);
+                    resolve(resultado);
+                }, 1000);
+            });
+        }
+
+        function multiplicar(numero, factor) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const resultado = numero * factor;
+                    console.log(`Multiplicación: ${resultado}`);
+                    resolve(resultado);
+                }, 2000);
+            });
+        }
+        
+        function dividir(numero, factor) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const resultado = numero / factor;
+                    console.log(`División: ${resultado}`);
+                    resolve(resultado);
+                }, 2000);
+            });
+        }
+
+        sumar(2, 3)
+            .then(resSuma => {
+                return multiplicar(resSuma, 4);
+            })
+            .then(resMult => {
+                return dividir(resMult, 2);
+            })
+
+            .catch(error => {
+                console.error(`Error: ${error}`);
+            });
+    </script>
+</body>
+</html>
